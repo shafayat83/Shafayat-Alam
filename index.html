@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Falcon Blog — Soar with Words</title>
+    <meta name="description" content="A modern, fully responsive, 3D professional blogging platform.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/">
+    <meta property="og:title" content="Falcon Blog — Soar with Words">
+    <meta property="og:description" content="A modern, fully responsive, 3D professional blogging platform.">
+    <meta property="og:image" content="https://picsum.photos/1200/630">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://example.com/">
+    <meta property="twitter:title" content="Falcon Blog — Soar with Words">
+    <meta property="twitter:description" content="A modern, fully responsive, 3D professional blogging platform.">
+    <meta property="twitter:image" content="https://picsum.photos/1200/630">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Orbitron:wght@700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              'sans': ['Inter', 'sans-serif'],
+              'display': ['Orbitron', 'sans-serif'],
+            },
+            colors: {
+              'navy': '#071028',
+              'silver': '#B8C0C8',
+              'orange': '#FF6A3D',
+              'light-bg': '#F8F9FA',
+              'light-text': '#071028',
+            },
+            boxShadow: {
+              '3d-light': '0 10px 30px -5px rgba(0, 0, 0, 0.2)',
+              '3d-dark': '0 10px 30px -5px rgba(255, 106, 61, 0.2)',
+            },
+            keyframes: {
+              fadeInUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+            },
+            animation: {
+              fadeInUp: 'fadeInUp 0.5s ease-out forwards',
+            },
+          }
+        }
+      }
+    </script>
+    <style>
+      .transform-style-3d { transform-style: preserve-3d; }
+      .perspective-1000 { perspective: 1000px; }
+      .backface-hidden { backface-visibility: hidden; }
+      @media (prefers-reduced-motion: reduce) {
+        *, ::before, ::after {
+          animation-delay: -1ms !important;
+          animation-duration: 1ms !important;
+          animation-iteration-count: 1 !important;
+          background-attachment: scroll !important;
+          scroll-behavior: auto !important;
+          transition-duration: 0s !important;
+          transition-delay: 0s !important;
+        }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/"
+  }
+}
+</script>
+</head>
+  <body class="bg-light-bg dark:bg-navy text-light-text dark:text-silver font-sans antialiased">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
